@@ -1,92 +1,374 @@
+:root {
+    --verde-uabc: #007a3d;
+    --verde-oscuro: #005b2d;
+    --dorado: #d9a441;
+    --azul-texto: #173b4d;
+    --gris-fondo: #f4f6f5;
+    --blanco: #ffffff;
+    --sombra: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    color: var(--azul-texto);
+    background-color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #263238;
-    background-color: #eef2f5;
 }
 
-header {
-    padding: 35px 20px;
-    color: white;
-    text-align: center;
-    background: linear-gradient(135deg, #123b5d, #1f628e);
-}
-
-header h1 {
-    margin: 15px 0 8px;
-    font-size: 2.2rem;
-}
-
-header p {
-    margin: 4px 0;
-    font-size: 1.05rem;
-}
-
-.foto-profesora {
-    display: block;
-    width: 180px;
-    height: 180px;
+.contenedor {
+    width: min(100% - 40px, 1180px);
     margin: 0 auto;
+}
+
+/* Encabezado verde */
+.encabezado-institucional {
+    color: var(--blanco);
+    background-color: var(--verde-uabc);
+}
+
+.encabezado-superior {
+    display: flex;
+    align-items: center;
+    min-height: 130px;
+    background-color: var(--verde-uabc);
+}
+
+.marca-texto {
+    color: var(--blanco);
+}
+
+.marca-texto h1 {
+    margin: 0 0 12px;
+    color: var(--blanco);
+    font-size: 2.1rem;
+}
+
+.marca-texto p {
+    margin: 6px 0;
+    color: var(--blanco);
+}
+
+/* Menú */
+.menu-principal {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: var(--verde-oscuro);
+}
+
+.menu-principal .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.menu-principal a {
+    padding: 15px 18px;
+    color: var(--blanco);
+    font-size: 0.86rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-principal a:hover {
+    color: var(--dorado);
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+/* Banner principal */
+.banner-principal {
+    min-height: 440px;
+    background:
+        linear-gradient(90deg, rgba(0, 91, 45, 0.92), rgba(0, 91, 45, 0.55)),
+        url("../img/foto-profesora.jpg") center / cover no-repeat;
+}
+
+.banner-contenido {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    min-height: 440px;
+}
+
+.banner-foto img {
+    width: 230px;
+    height: 230px;
     object-fit: cover;
-    border: 5px solid white;
+    border: 7px solid var(--blanco);
     border-radius: 50%;
-    box-shadow: 0 3px 12px rgb(0 0 0 / 30%);
+    box-shadow: var(--sombra);
 }
 
-main {
-    width: min(100% - 40px, 1000px);
-    margin: 35px auto;
+.banner-texto {
+    max-width: 650px;
+    color: var(--blanco);
 }
 
-section {
-    margin-bottom: 25px;
-    padding: 25px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+.banner-texto h1 {
+    margin: 8px 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
 }
 
-h2 {
-    margin-top: 0;
-    padding-bottom: 8px;
-    color: #123b5d;
-    border-bottom: 3px solid #d69e2e;
+.banner-texto p {
+    font-size: 1.15rem;
 }
 
-li {
-    margin-bottom: 8px;
+.banner-texto .cargo {
+    margin: 8px 0;
+    color: var(--dorado);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-a {
-    color: #1261a0;
+/* Etiquetas */
+.etiqueta,
+.etiqueta-verde,
+.etiqueta-dorada {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
+.etiqueta {
+    color: var(--dorado);
+}
+
+.etiqueta-verde {
+    color: var(--verde-uabc);
+}
+
+.etiqueta-dorada {
+    color: var(--dorado);
+}
+
+/* Botón */
+.boton-dorado {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    color: var(--verde-oscuro);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--dorado);
+    border-radius: 4px;
+}
+
+.boton-dorado:hover {
+    background-color: var(--blanco);
+}
+
+/* Secciones */
+.seccion {
+    padding: 70px 0;
+}
+
+.fondo-claro {
+    background-color: var(--gris-fondo);
+}
+
+.encabezado-seccion {
+    margin-bottom: 30px;
+}
+
+.encabezado-seccion h2 {
+    max-width: 750px;
+    margin: 8px 0 0;
+    color: var(--verde-oscuro);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.15;
+}
+
+/* Tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta {
+    padding: 28px;
+    background-color: var(--blanco);
+    border-top: 5px solid var(--dorado);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta h3 {
+    margin-top: 10px;
+    color: var(--verde-oscuro);
+}
+
+.numero-tarjeta {
+    color: var(--dorado);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Proyectos */
+.lista-proyectos {
+    display: grid;
+    gap: 18px;
+}
+
+.proyecto {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 25px;
+    padding: 22px;
+    border-left: 5px solid var(--verde-uabc);
+    background-color: var(--gris-fondo);
+}
+
+.proyecto h3 {
+    margin: 0 0 8px;
+    color: var(--verde-oscuro);
+}
+
+.anio {
+    color: var(--dorado);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Enlaces de publicaciones e integrantes */
+.publicacion a,
+.integrante a,
+.datos-contacto a {
+    color: var(--verde-uabc);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.publicacion a:hover,
+.integrante a:hover,
+.datos-contacto a:hover {
+    text-decoration: underline;
+}
+
+.integrante img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Contacto */
+.contacto {
+    color: var(--blanco);
+    background-color: var(--verde-oscuro);
+}
+
+.contacto-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.contacto h2 {
+    max-width: 650px;
+    margin: 8px 0;
+    font-size: 2rem;
+}
+
+.datos-contacto {
+    display: grid;
+    gap: 12px;
+}
+
+.datos-contacto a {
+    color: var(--blanco);
+}
+
+/* Pie de página */
 footer {
-    padding: 25px 20px;
-    color: white;
+    padding: 28px 0;
+    color: var(--blanco);
     text-align: center;
-    background-color: #123b5d;
+    background-color: var(--azul-texto);
 }
 
 footer p {
     margin: 4px 0;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.6rem;
+/* Ajustes para tablet */
+@media (max-width: 850px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
     }
 
-    main {
-        width: min(100% - 20px, 1000px);
+    .banner-contenido {
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0;
+        text-align: center;
     }
 
-    section {
-        padding: 18px;
+    .contacto-contenido {
+        display: block;
+    }
+
+    .datos-contacto {
+        margin-top: 25px;
     }
 }
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+    .contenedor {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .encabezado-superior {
+        min-height: 150px;
+    }
+
+    .marca-texto h1 {
+        font-size: 1.7rem;
+    }
+
+    .menu-principal .contenedor {
+        justify-content: center;
+    }
+
+    .menu-principal a {
+        padding: 10px 8px;
+        font-size: 0.72rem;
+    }
+
+    .banner-principal,
+    .banner-contenido {
+        min-height: 560px;
+    }
+
+    .banner-foto img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .banner-texto h1 {
+        font-size: 2rem;
+    }
+
+    .seccion {
+        padding: 45px 0;
+    }
+
+    .proyecto {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
