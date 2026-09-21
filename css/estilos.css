@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
 }
 
-/* Encabezado verde */
+/* Encabezado institucional */
 .encabezado-institucional {
     color: var(--blanco);
     background-color: var(--verde-uabc);
@@ -57,7 +57,7 @@ body {
     color: var(--blanco);
 }
 
-/* Menú */
+/* Menú principal */
 .menu-principal {
     border-top: 1px solid rgba(255, 255, 255, 0.25);
     background-color: var(--verde-oscuro);
@@ -84,7 +84,7 @@ body {
     background-color: rgba(255, 255, 255, 0.10);
 }
 
-/* Banner principal */
+/* Banner de la página principal: Belem */
 .banner-principal {
     min-height: 440px;
     background:
@@ -92,20 +92,20 @@ body {
         url("../img/foto-profesora.jpg") center / cover no-repeat;
 }
 
+/* Banner exclusivo de la página de Myriam */
+.banner-myriam {
+    background: linear-gradient(
+        90deg,
+        var(--verde-oscuro),
+        var(--verde-uabc)
+    );
+}
+
 .banner-contenido {
     display: flex;
     align-items: center;
     gap: 55px;
     min-height: 440px;
-}
-
-.banner-foto img {
-    width: 230px;
-    height: 230px;
-    object-fit: cover;
-    border: 7px solid var(--blanco);
-    border-radius: 50%;
-    box-shadow: var(--sombra);
 }
 
 .banner-texto {
@@ -128,6 +128,16 @@ body {
     color: var(--dorado);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.banner-foto img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border: 7px solid var(--dorado);
+    border-radius: 50%;
+    box-shadow: var(--sombra);
 }
 
 /* Etiquetas */
@@ -153,7 +163,7 @@ body {
     color: var(--dorado);
 }
 
-/* Botón */
+/* Botones */
 .boton-dorado {
     display: inline-block;
     margin-top: 20px;
@@ -169,7 +179,7 @@ body {
     background-color: var(--blanco);
 }
 
-/* Secciones */
+/* Secciones generales */
 .seccion {
     padding: 70px 0;
 }
@@ -215,7 +225,7 @@ body {
     font-weight: bold;
 }
 
-/* Proyectos */
+/* Proyectos y publicaciones */
 .lista-proyectos {
     display: grid;
     gap: 18px;
@@ -241,7 +251,7 @@ body {
     font-weight: bold;
 }
 
-/* Enlaces de publicaciones e integrantes */
+/* Enlaces e integrantes */
 .publicacion a,
 .integrante a,
 .datos-contacto a {
@@ -372,3 +382,11 @@ footer p {
     }
 }
 
+
+.banner-olga {
+    background: linear-gradient(
+        90deg,
+        var(--verde-oscuro),
+        var(--verde-uabc)
+    );
+}
